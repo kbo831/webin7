@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전라북도경찰청_반응형</title>
+<!--    폰트연결하기-->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+   
+    <script src="./js/jquery.js"></script>
+    <script src="./js/prefixfree.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <script src="./js/device.js"></script>
+   
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <div class="h_lst">
+                <a href="index.html" class="logo">전북경찰청</a>
+                <ul class="lst_box">
+                    <li>
+                        <button class="m_btn">
+                            <span class="bar1">1</span>
+                            <span class="bar2">2</span>
+                            <span class="bar3">3</span>
+                            <span class="close">close</span>
+                        </button>
+                    </li>
+                </ul>
+                <script>
+                $(document).ready(function(){
+                   $(".m_btn").click(function(){
+                      $(".m_btn").toggleClass("on");
+                       $(".hd .gnb").toggleClass("on").find(".g_lst").slideDown(1000);
+                   }); 
+                });
+                </script>
+            </div>
+            <div class="gnb clr">
+               <div class="gnb_wrap">
+                    <ul class="g_lst">
+                    <li class="it">
+                        <a href="" class="item">국민마당</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">소통·칭찬</a>
+                            </li>
+                            <li>
+                                <a href="">봉사활동·견학</a>
+                            </li>
+                            <li>
+                                <a href="">민원서식</a>
+                            </li>
+                            <li>
+                                <a href="">경찰민원서비스</a>
+                            </li>
+                            <li>
+                                <a href="">경찰웹메일</a>
+                            </li>
+                        </ul>     
+                    </li>
+                    <li class="it">
+                        <a href="" class="item">알림마당</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">공지·보도</a>
+                            </li>
+                            <li>
+                                <a href="">채용·입찰</a>
+                            </li>
+                            <li>
+                                <a href="">집회·시위안내</a>
+                            </li>
+                            <li class="long">
+                                <a href="">업무추진·기타자료</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="it">
+                        <a href="" class="item">정보마당</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">공공데이터개방</a>
+                            </li>
+                            <li class="long">
+                                <a href="" x>정보공개청구·사전정보공표</a>
+                            </li>
+                            <li class="center">
+                                <a href="" >행정심판</a>
+                            </li>
+                            <li class="long">
+                                <a href="" >법령정보·규제개혁</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="it">
+                        <a href="" class="item">홍보마당</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">사건현장Now</a>
+                            </li>
+                            <li>
+                                <a href="">홍보자료실</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="it">
+                        <a href="" class="item">소개마당</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">청장과의 만남</a>
+                            </li>
+                            <li>
+                                <a href="">관서소개</a>
+                            </li>
+                        </ul>                       
+                    </li>
+                </ul>
+                 <script>
+                $(document).ready(function(){
+                    $(".g_lst li.it .item").mouseover(function(){
+                        $(this).addClass("on");
+                        $(this).next(".sub").fadeIn(700);
+                    }); 
+                      $(".g_lst li.it .item").mouseout(function(){
+                        $(this).removeClass("on");
+                      
+                    }); 
+                    
+                });
+                </script>
+                </div>
+                
+            </div>
+        </header>
+        <div class="content">
+            <figure class="vs">
+                <ul class="vs_box">
+                    <li class="it1">
+                        <img src="./m_data/m_ico/main_pdol.png" alt="포돌이" class="podol">
+                        <div class="btxt">
+                            <h2 class="big">전라북도경찰청</h2>
+                            <p class="com">Junbuk provincial police agency</p>
+                        </div>
+                        <img src="./m_data/m_ico/main_posoon.png" alt="포순이" class="posoon">
+                    </li>
+                    <li class="it2">
+                        고구마
+                    </li>
+                </ul>
+                <script>
+                $(document).ready(function(){
+                    var cnt = $(".vs_box li").length;
+                        
+                    function prev(){
+                        $(".vs_box").not(":animated").animate({"margin-left":"-1920px"},700,function(){
+                            $(".vs_box li").eq(0).appendTo($(".vs_box"));
+                            $(".vs_box").css("margin-left","0px");
+                        });
+                      
+                    }
+                    
+                    function next(){
+                        $(".vs_box li").eq(cnt-1).prependTo($(".vs_box"));
+                        $(".vs_box").css("margin-left","-1920px");
+                         $(".vs_box").not(":animated").animate({"margin-left":"0px"},700);
+                    }
+                    
+                    $("button.prev").click(function(){
+                        prev();
+                    });
+                    $("button.next").click(function(){
+                        next();
+                    });
+                    
+                });
+                </script>
+            </figure>
+            <div class="vs_btn">
+                <button class="prev">이전</button>
+                <button cllass="next">다음</button>
+            </div>
+        </div>
+        <footer class="ft">
+            
+        </footer>
+    </div>
+    
+</body>
+</html>
