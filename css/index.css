@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*content*/
+.content { width: 100vw ; }
+.vs { width: 100%; height: 800px; overflow: hidden;}
+.vs .vs_box { width:200%; height:800px; }
+.vs .vs_box li { width: 50%; height:100%; position: relative; }
+.vs .vs_box .btxt { position:absolute; font-size:  80px; top: 25%; left: 50%; margin-left: -419px; text-align: center;
+    /* 텍스트 그라디언트 */
+    background: #3366cc; 
+    background: -moz-linear-gradient(-45deg, #3366cc 0%, #75d3ff 63%); 
+    background: -webkit-linear-gradient(-45deg, #3366cc 0%,#75d3ff 63%); 
+    background: linear-gradient(135deg, #3366cc 0%,#75d3ff 63%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3366cc', endColorstr='#75d3ff',GradientType=1 ); 
+-webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;}
+ .vs .vs_box .btxt p.com { font-size: 50px;}
+
+.vs .vs_box img { display: block ;  width: 297px; height: 402px; position:absolute; top:10%; }
+.vs .vs_box img.podol { left: 150px;}
+.vs .vs_box img.posoon { right: 150px;}
+
+
+/*버튼 양쪾 사이드 높이는 풀사이즈 마우스 포인터 버튼에 호버시 바뀜 */

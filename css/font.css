@@ -1,0 +1,8 @@
+@font-face { 
+font-family: "Binggrae-Bold";
+src:local(※), 
+url("../font/Binggrae-Bold.woff") format("woff"),
+url("../font/Binggrae-Bold.eot") format("embedded-opentype");
+    
+}
+
