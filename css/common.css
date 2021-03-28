@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+body,html { width: 100%; overflow-x:hidden; font-family: "Binggrae-Bold","sans-serif"; }
+ul { list-style: none; }
+a { text-decoration: none; }
+img,input,button { background-color: transparent; border:0; outline:0; user-select: none;  }
+
+.clr{ clear:both; }
+.clr:after{ content:""; display: block; clear:both; }
+
+.wrap { width: 100vw; height: 100vh; }
+.hd { width: 100%; height: 150px; overflow: hidden; }
+/*gnb 작성후 해드에   overflow:hidden; 넣기 */
+.hd .h_lst { width: 100%; height: 100%; margin: 20px;}
+.hd .h_lst .logo { float:left; position: fixed; z-index: 99; }
+.hd .h_lst .logo  { display: block; background-image:url("../logo/logo_JEONBUK.png"); width: 422px; height: 102px; text-indent: -9999px; }
+
+.hd .h_lst .lst_box { float:right; width: 150px; height: 102px; position:fixed; top:4%; z-index: 101; right:0;}
+
+.hd .h_lst .lst_box li { width: 80%; height:100%;  float:left;  }
+.hd .h_lst .lst_box li .m_btn { display: block;  width:80px; height: 70px; position: relative; border:0; background-color: transparent; outline: 0; border:0; }
+.hd .h_lst .lst_box li .m_btn span { display: block; width: 60px; height: 10px; background-color: #000; position:absolute; left: 10px; transition: 0.7s; border-radius: 3px;}
+.hd .h_lst .lst_box li .m_btn span.bar1 { top: 15%; text-indent: -9999px;  }
+.hd .h_lst .lst_box li .m_btn span.bar2 { top: 45%; width:40px;  text-indent: -9999px; }
+.hd .h_lst .lst_box li .m_btn span.bar3 { top: 75%;  text-indent: -9999px; }
+.hd .h_lst .lst_box li .m_btn span.close { top:40%; left: -80px; background-color: transparent; font-size: 25px; opacity: 0; visibility: hidden; font-weight: 700;  } 
+
+.hd .h_lst .lst_box li .m_btn.on{ border:0;}
+.hd .h_lst .lst_box li .m_btn.on span.bar1 { top:43%; transform: rotate(225deg); background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.bar2 { width:0; background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.bar3 { top:43%; transform: rotate(-225deg); background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.close { opacity: 1; visibility: visible; color:#fff; }
+
+.hd .gnb { width: 100vw; height: 100vh; transition:0.7s; position:fixed; left: 0; top: 0; overflow: hidden; margin-top: -100vw; background-image: url(../m_data/m_bg/gnb_bg2.png); background-position: center center; background-repeat: no-repeat; z-index: 100; }
+
+
+.hd .gnb.on { margin-top: 0px; }
+
+.hd .gnb .wrap { width: 100%; height: 100%; position: relative; }
+.hd .gnb  .logo_lst { height:102px; margin: 20px; } 
+.hd .gnb  .logo_lst li { float:left; }
+
+.hd .gnb  .g_lst { width: 100%; height: 100%; position: absolute; top: 14%; left: 10%; display: none; }
+.hd .gnb  .g_lst li.it { width: 10%; height:15%;  font-size: 40px; position: relative; font-weight: 800; }
+
+.hd .gnb  .g_lst li.it  a.item {  display: block; width: 100%; height: 100% ; text-align: center; line-height: 140px; color: #062e81; }
+
+.hd .gnb  .sub { position:absolute; top:39%;  left:13vw  ; width: 60vw; display: none; } 
+.hd .gnb  .sub li { width: 18%; height: 10%; float:left }
+.hd .gnb  .sub li a { display: block; width: 100%; height: 100%;  font-size: 23px; line-height: 1.6; text-align: left; color:#000; transition:0.5s; box-sizing: border-box; }
+.hd .gnb  .sub li a:hover { color: #fff; }
+.hd .gnb  .sub li.long { width: 28%;}
+.hd .gnb  .sub li.center a{ padding-left: 30px; }
+.hd .gnb  .g_lst li.it a.on { color: #fff; margin-left: 30px; }
