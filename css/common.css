@@ -1,77 +1,55 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0; }
-body,html { width: 100%; font-family:"Binggrae-Bold","sans-serif"; overflow-x: hidden; }
-ul { list-style-type: none; }
+body,html { width: 100%; overflow-x:hidden; font-family: "Binggrae-Bold","sans-serif"; }
+ul { list-style: none; }
 a { text-decoration: none; }
+img,input,button { background-color: transparent; border:0; outline:0; user-select: none;  }
+
+.clr{ clear:both; }
+.clr:after{ content:""; display: block; clear:both; }
 
 .wrap { width: 100vw; height: 100vh; }
-.clr { clear: both; }
-.clr:after { content:" "; clear:both; display: block; }
+.hd { width: 100%; height: 150px; overflow: hidden; }
+/*gnb 작성후 해드에   overflow:hidden; 넣기 */
+.hd .h_lst { width: 100%; height: 100%; margin: 20px;}
+.hd .h_lst .logo { float:left; position: fixed; z-index: 99; }
+.hd .h_lst .logo  { display: block; background-image:url("../logo/logo_JEONBUK.png"); width: 422px; height: 102px; text-indent: -9999px; }
 
-/* header */
-.hd { width: 100%; background-color: #000; height: 10%;  }
-.hd .t_logo { display: block; width: 200px; height: 64px; float:left; }
-.hd .t_logo img { display: block ; width: 100%; height: 90%; margin-left: 5% ; margin-top: 1.5%     }
-.hd .open { display: block; color:#fff; width: 20%; height: 100%; float: right; position: relative; }
-.hd .open span { display: block; position: absolute; width: 50%; height: 5px; background-color: #fff; z-index: 99;  border-radius: 3px; transition: 0.3s;  }
-.hd .open span.bar1 { left: 10%; top: 25%; }
-.hd .open span.bar2 { left: 10%; top: 45%; }
-.hd .open span.bar3 { left: 10%; top: 65%; }
+.hd .h_lst .lst_box { float:right; width: 150px; height: 102px; position:fixed; top:4%; z-index: 101; right:0;}
 
-.hd .checkbox { display: none; }
+.hd .h_lst .lst_box li { width: 80%; height:100%;  float:left;  }
+.hd .h_lst .lst_box li .m_btn { display: block;  width:80px; height: 70px; position: relative; border:0; background-color: transparent; outline: 0; border:0; }
+.hd .h_lst .lst_box li .m_btn span { display: block; width: 60px; height: 10px; background-color: #000; position:absolute; left: 10px; transition: 0.7s; border-radius: 3px;}
+.hd .h_lst .lst_box li .m_btn span.bar1 { top: 15%; text-indent: -9999px;  }
+.hd .h_lst .lst_box li .m_btn span.bar2 { top: 45%; width:40px;  text-indent: -9999px; }
+.hd .h_lst .lst_box li .m_btn span.bar3 { top: 75%;  text-indent: -9999px; }
+.hd .h_lst .lst_box li .m_btn span.close { top:40%; left: -80px; background-color: transparent; font-size: 25px; opacity: 0; visibility: hidden; font-weight: 700;  } 
 
-.left_fix { width: 100%; height: 600px; background-color:#000 ; z-index: 99; float: left;  display: none; overflow: hidden; position: fixed; border-top:1px solid #fff;  top: 10%; }
-.left_fix .lj_box { width: 100%; height:60px; border:1px solid #fff;}
-.left_fix .lj_box a { display: block; width: 49.5%; float:left; text-align: center; line-height: 60px; background-color: #000; color:#aaa; font-weight: 600; }
-.left_fix .lj_box a:hover { background-color: #ececec; color:#000; font-weight: 900 ;  }
+.hd .h_lst .lst_box li .m_btn.on{ border:0;}
+.hd .h_lst .lst_box li .m_btn.on span.bar1 { top:43%; transform: rotate(225deg); background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.bar2 { width:0; background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.bar3 { top:43%; transform: rotate(-225deg); background-color: #fff; }
+.hd .h_lst .lst_box li .m_btn.on span.close { opacity: 1; visibility: visible; color:#fff; }
 
-#btn:checked ~ .left_fix {  display: block; }
-#btn:checked ~ .open .bar1 { top:49%;transform:rotate(45deg);}
-#btn:checked ~ .open .bar2 { opacity: 0; }
-#btn:checked ~ .open .bar3 { top:49%; transform:rotate(135deg);}
-
-.left_fix .tnb { width: 100%; height: 100%; margin: 0 auto;  }
-.left_fix .tnb > li { width:50vw; position: relative;  text-align: left;  }
-.left_fix .tnb li label { display: block;   line-height: 4.0;  font-weight: 900; cursor: pointer;  box-sizing: border-box;  font-size:20px;  color: #aaa; padding-left: 15%; }
-
-/*여기 고치기: 라디오 버튼이나 on 클래스사*/
-.left_fix .tnb li label:hover { background-color: #ececec; color:#000;  }
-.left_fix .tnb li label:hover ~ .sub { opacity: 1; visibility: visible; }
-
-/* 서브메뉴: ul.에 공통 포지션 주면 됨*/
-.left_fix .tnb .sub { position:absolute; width: 50vw; height:40px; top: 0; left: 100%; transition: 0.4s; opacity: 0; visibility: hidden;  box-sizing: border-box; background-color:#ececec; height: 100vh;}
-/* 백그라운드 깔아주기 각각 서브배경에 하나의 그림으로! */
-.left_fix .tnb .sub li { clear:both; width: 100%; }
-.left_fix .tnb .sub a { display: block; font-size: 19px; color: #aaa; line-height: 4.0;  font-weight: 600;  font-size: 20px; padding-left: 30%; box-sizing: border-box; }
-.left_fix .tnb .sub a:hover { color: #000; background-color: #fff;}
+.hd .gnb { width: 100vw; height: 100vh; transition:0.7s; position:fixed; left: 0; top: 0; overflow: hidden; margin-top: -100vw; background-image: url(../m_data/m_bg/gnb_bg2.png); background-position: center center; background-repeat: no-repeat; z-index: 100; }
 
 
-  /*ft*/
-.ft { width: 100vw;  height: auto; position: fixed; bottom: 0; left: 0; z-index: 80; box-sizing: border-box; padding-left:5%; color: #ddd; background-color: rgba(0,0,0); }
-.ft .tit { line-height: 2.0; font-size: 18px; }
+.hd .gnb.on { margin-top: 0px; }
 
-.ft p { float: left; line-height: 1.8; margin-right: 1%; font-size: 13px; }
-.ft p.add { width: 100%; }
-.ft p.add2 { float:left; width: 100%; } 
-.ft p.add3  { width: 100%; }
-.ft p.call { width: 100%; clear: both; }
-.ft p.call:before { content: ""; display: block; width: 15px; height:15px; background-image: url("../sns/tell_s.png"); float: left; margin:1.5% ;  margin-right: 10px; background-color: #fff; border-radius: 20px;}
+.hd .gnb .wrap { width: 100%; height: 100%; position: relative; }
+.hd .gnb  .logo_lst { height:102px; margin: 20px; } 
+.hd .gnb  .logo_lst li { float:left; }
 
+.hd .gnb  .g_lst { width: 100%; height: 100%; position: absolute; top: 14%; left: 10%; display: none; }
+.hd .gnb  .g_lst li.it { width: 10%; height:15%;  font-size: 40px; position: relative; font-weight: 800; }
 
-.ft .ft_box .sns { position:absolute;  padding: 0; right: 10%; bottom:25%; }
-.ft .ft_box .sns li { float: left; width: 30px }
+.hd .gnb  .g_lst li.it  a.item {  display: block; width: 100%; height: 100% ; text-align: center; line-height: 140px; color: #062e81; }
 
-.ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 20px; height: 20px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
-.ft .ft_box .sns li.sns1 a { background-image: url("../sns/face_m.png"); background-color: #fff;}
-.ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
-.ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta_m.png");}
-.ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
-.ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao_m.png");}
-.ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
-
-
-
-
-
-
+.hd .gnb  .sub { position:absolute; top:39%;  left:13vw  ; width: 60vw; display: none; } 
+.hd .gnb  .sub li { width: 18%; height: 10%; float:left }
+.hd .gnb  .sub li a { display: block; width: 100%; height: 100%;  font-size: 23px; line-height: 1.6; text-align: left; color:#000; transition:0.5s; box-sizing: border-box; }
+.hd .gnb  .sub li a:hover { color: #fff; }
+.hd .gnb  .sub li.long { width: 28%;}
+.hd .gnb  .sub li.center a{ padding-left: 30px; }
+.hd .gnb  .g_lst li.it a.on { color: #fff; margin-left: 30px; }
