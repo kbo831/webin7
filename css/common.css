@@ -9,9 +9,9 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .clr{ clear:both; }
 .clr:after{ content:""; display: block; clear:both; }
 
-.wrap { width: 100vw; height: 100vh; }
+.wrap { width: 100vw;  }
 .hd { width: 100%; height: 150px; overflow: hidden; }
-/*gnb 작성후 해드에   overflow:hidden; 넣기 */
+
 .hd .h_lst { width: 100%; height: 100%; margin: 20px;}
 .hd .h_lst .logo { float:left; position: fixed; z-index: 99; }
 .hd .h_lst .logo  { display: block; background-image:url("../logo/logo_JEONBUK.png"); width: 422px; height: 102px; text-indent: -9999px; }
@@ -53,3 +53,19 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .hd .gnb  .sub li.long { width: 28%;}
 .hd .gnb  .sub li.center a{ padding-left: 30px; }
 .hd .gnb  .g_lst li.it a.on { color: #fff; margin-left: 30px; }
+
+
+/*footer*/
+.ft{ width: 100%; height: auto; clear:both; background-image: url("../ico/ft_bar.png");}
+.ft_wrap { width: 96%; height: auto;  margin: 0 auto; }
+.ft_wrap .sel { width: 35%; float:left; }
+.ft_wrap .fnb { width: 60%;  float:left; }
+
+.ft_wrap .sel .tit { font-size: 30px;  color: #fff; line-height: 3.0; }
+.ft_wrap .sel > li { width: 70%; height: 70px; }
+.ft_wrap .sel label { display: block; width:45%; height: 100%;  color: #fff; font-size: 27px;  line-height: 70px; border-bottom: 2px solid #fff; }
+.ft_wrap .ck_lst .sub { width: 45%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:2px solid #fff;  transition: 0.5s; border-top: 0;  }
+.ft_wrap .ck_lst .sub  li a { color: #fff;  display: block;  box-sizing: border-box; padding-left: 20px;}
+
+#check:checked ~ .ck_lst .sub { opacity:1;  visibility: visible;  height: 250px; }
+.ck { display: none;}
