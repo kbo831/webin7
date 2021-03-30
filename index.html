@@ -144,7 +144,7 @@
 
             </div>
         </header>
-        <div class="content">
+        <div class="content clr">
             <figure class="vs">
                 <ul class="vs_box">
                     <li class="it1">
@@ -154,8 +154,8 @@
                             <p class="com">Junbuk provincial police agency</p>
                         </div>
                         <img src="./m_data/m_ico/main_posoon.png" alt="포순이" class="posoon">
-                        <div class="nav_box">
-                            <ul class="nav">
+                        <div class="nav_box clr">
+                            <ul class="nav clr">
                                 <li class="it1"><a href="">공지사항</a></li>
                                 <li class="it2"><a href="">견학안내</a></li>
                                 <li class="it3"><a href="">봉사안내</a></li>
@@ -174,7 +174,7 @@
 
                         function prev() {
                             $(".vs_box").not(":animated").animate({
-                                "margin-left": "-100vw"
+                                "margin-left": "-1920px"
                             }, 700, function() {
                                 $(".vs_box li").eq(0).appendTo($(".vs_box"));
                                 $(".vs_box").css("margin-left", "0px");
@@ -184,7 +184,7 @@
 
                         function next() {
                             $(".vs_box li").eq(cnt - 1).prependTo($(".vs_box"));
-                            $(".vs_box").css("margin-left", "-100vw");
+                            $(".vs_box").css("margin-left", "-1920px");
                             $(".vs_box").not(":animated").animate({
                                 "margin-left": "0px"
                             }, 700);
@@ -206,8 +206,8 @@
                     <button class="next">다음</button>
                 </div>
             </figure>
-            <section class="pg" id="pg1">
-                <div class="wrap">
+            <section class="pg clr" id="pg1">
+                <div class="wrap clr">
                     <div class="text_box">
                         <h1 class="tit">안전한 전북,</h1>
                         <h1 class="tit left">존경과 사랑받는 경찰</h1>
@@ -216,7 +216,7 @@
                     <a href="" class="poli_serv">경찰서비스헌장 보기</a>
                 </div>
             </section>
-            <section class="pg" id="pg2">
+            <section class="pg clr" id="pg2">
                 <h1 class="tit">자주가는 메뉴</h1>
                 <div class="wrap">
                     <ul class="of_lst clr">
