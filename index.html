@@ -50,7 +50,7 @@
                     </ul>
                     <ul class="g_lst">
                         <li class="it">
-                            <a href="" class="item">국민마당</a>
+                            <a href="javascript:;" class="item">국민마당</a>
                             <ul class="sub">
                                 <li>
                                     <a href="">소통·칭찬</a>
@@ -70,7 +70,7 @@
                             </ul>
                         </li>
                         <li class="it">
-                            <a href="" class="item">알림마당</a>
+                            <a href="javascript:;" class="item">알림마당</a>
                             <ul class="sub">
                                 <li>
                                     <a href="">공지·보도</a>
@@ -87,7 +87,7 @@
                             </ul>
                         </li>
                         <li class="it">
-                            <a href="" class="item">정보마당</a>
+                            <a href="javascript:;" class="item">정보마당</a>
                             <ul class="sub">
                                 <li>
                                     <a href="">공공데이터개방</a>
@@ -104,7 +104,7 @@
                             </ul>
                         </li>
                         <li class="it">
-                            <a href="" class="item">홍보마당</a>
+                            <a href="javascript:;" class="item">홍보마당</a>
                             <ul class="sub">
                                 <li>
                                     <a href="">사건현장Now</a>
@@ -115,7 +115,7 @@
                             </ul>
                         </li>
                         <li class="it">
-                            <a href="" class="item">소개마당</a>
+                            <a href="javascript:;" class="item">소개마당</a>
                             <ul class="sub">
                                 <li>
                                     <a href="">청장과의 만남</a>
@@ -128,12 +128,13 @@
                     </ul>
                     <script>
                         $(document).ready(function() {
-                            $(".g_lst li.it .item").mouseover(function() {
+                            $(".g_lst li.it .item").mouseenter(function() {
                                 $(this).addClass("on");
                                 $(this).next(".sub").fadeIn(700);
                             });
-                            $(".g_lst li.it .item").mouseout(function() {
+                            $(".g_lst li.it .item").mouseleave(function() {
                                 $(this).removeClass("on");
+                                $(this).next(".sub").fadeOut(700);
 
                             });
 
@@ -159,7 +160,7 @@
                                 <li class="it2"><a href="">견학안내</a></li>
                                 <li class="it3"><a href="">봉사안내</a></li>
                                 <li class="it4"><a href="">민원서식</a></li>
-                                <li class="it5"><a href="">소개</a></li>
+                                <li class="it5"><a href="">관서소개</a></li>
                             </ul>
                         </div>
                     </li>
@@ -173,7 +174,7 @@
 
                         function prev() {
                             $(".vs_box").not(":animated").animate({
-                                "margin-left": "-1920px"
+                                "margin-left": "-100vw"
                             }, 700, function() {
                                 $(".vs_box li").eq(0).appendTo($(".vs_box"));
                                 $(".vs_box").css("margin-left", "0px");
@@ -183,7 +184,7 @@
 
                         function next() {
                             $(".vs_box li").eq(cnt - 1).prependTo($(".vs_box"));
-                            $(".vs_box").css("margin-left", "-1920px");
+                            $(".vs_box").css("margin-left", "-100vw");
                             $(".vs_box").not(":animated").animate({
                                 "margin-left": "0px"
                             }, 700);

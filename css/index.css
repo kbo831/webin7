@@ -5,7 +5,7 @@
 .vs { width: 100%; height: 800px; overflow: hidden; position:relative;  }
 .vs .vs_box { width:200%; height:800px; }
 .vs .vs_box li { width: 50%; height:100%; position: relative; overflow: hidden;}
-.vs .vs_box .btxt { position:absolute; font-size:  80px; top: 25%; left: 50%; margin-left: -419px; text-align: center;
+.vs .vs_box li.it1 .btxt { position:absolute; font-size:  80px; top: 25%; left: 50%; margin-left: -419px; text-align: center;
     /* 텍스트 그라디언트 */
     background: #3366cc; 
     background: -moz-linear-gradient(-45deg, #062e81 0%, #3366cc 63%); 
@@ -14,7 +14,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', endColorstr='#3366cc',GradientType=1 ); 
 -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;}
- .vs .vs_box .btxt p.com { font-size: 50px;}
+ .vs .vs_box li.it1 .btxt p.com { font-size: 50px;}
 
 .vs .vs_box img { display: block ;  width: 297px; height: 402px; position:absolute; top:10%; }
 .vs .vs_box img.podol { left: 150px;}
@@ -85,3 +85,110 @@
 /*#pg2 ul.of_lst li.hover a:hover::after { opacity: 1; visibility: visible; }*/
 
 /*리스트 호버시 it1 이미지 변경*/
+
+
+@media screen and (max-width:767px){
+    
+/*content*/
+.content { width: 360px; height: 100vh; overflow: hidden;}
+.vs { width: 100%; height: 90%; overflow: hidden; position:relative;  }
+.vs .vs_box { width:200%; height:100%; }
+.vs .vs_box li { width: 50%; height:100%; position: relative; overflow: hidden; float:left;}
+.vs .vs_box li.it1 .btxt { position:absolute; top: 50%; left: 50%;  text-align: center; width: 80%; margin-left: -144px; height: auto;
+    /* 텍스트 그라디언트 */
+    background: #3366cc; 
+    background: -moz-linear-gradient(-45deg, #062e81 0%, #3366cc 63%); 
+    background: -webkit-linear-gradient(-45deg, #062e81 0%,#3366cc 63%); 
+    background: linear-gradient(135deg, #062e81 0%,#3366cc 63%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', endColorstr='#3366cc',GradientType=1 ); 
+-webkit-background-clip: text;
+ -webkit-text-fill-color: transparent; font-size: 1em; }
+.vs .vs_box li.it1 .btxt h2.big { font-size: 2em; }
+ .vs .vs_box li.it1 .btxt p.com { font-size: 1em; }
+
+.vs .vs_box img { display: block ;  width: 30%; height: auto; position:absolute; top:20%; }
+.vs .vs_box img.podol { left: 20%;}
+.vs .vs_box img.posoon { right: 20%;}
+.vs .vs_box .nav_box { width: 100%; height:15% ; position:absolute; bottom: 10%; left: 0; background-color: #062e81; border : 1px solid #2c7ff2; box-sizing: border-box; overflow: hidden; }
+.vs .vs_box .nav_box  .nav {  width: 95%; height: auto;  margin: 0 auto; } 
+.vs .vs_box .nav li { width: 20%; height:100%; float: left; text-align: left; }
+.vs .vs_box .nav li a { display: block; height:100%; line-height: 80px; font-size:0.9em;  color: #fff; text-align: center;}
+.vs .vs_box .nav li a:hover { color: #3366cc; background-color: #fff; }
+
+/*슬라이드 넘겼을 때 시작하기 생각하기*/
+.vs .vs_box .poli_car { display: block; width: 235px; height: 118px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 11s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
+    
+@keyframes policar { 
+    0% { transform: translateX(100px); }
+    100%{transform: translateX(-1700px); }
+}
+
+/*버튼 양쪾 사이드 높이는 풀사이즈 마우스 포인터 버튼에 호버시 바뀜 */
+
+.vs button { display: block; height:800px; width:40px; position:absolute; top: 0; cursor: pointer; display: none; }
+.vs:hover button { display: block; }
+.vs .prev { left: 0; }
+.vs .next { right: 0; } 
+
+/*page 영역 :모든 영역 높이 800px; 큰틀에 overflow:hidden 고정 높이일 때 */
+.pg { width: 100%; height:800px; overflow: hidden; position:relative; }
+#pg1 { background-color: #fcfef5; }
+#pg1 .wrap{ width: 100%; height:100%;  background-image: url(../m_data/m_bg/pg1_bg.png);}
+#pg1 .text_box { width:43%; position:absolute; top: 50%; margin-top: -10%; left:50%; margin-left: -413.5px; }
+#pg1 .text_box h1.tit{ font-size: 60px; line-height: 1.6;  }
+#pg1 .text_box h1.left  { text-align: right; }
+#pg1 p.com { font-size: 25px;text-align: center; margin-top: 5%; line-height: 1.6;  }
+#pg1 .ani_box { position: absolute; bottom: 15%; left: 50%; margin-left: -96px ; width: 15%;  }
+#pg1  a { display: block; position: absolute; bottom: 15%; left: 50%; margin-left: -96px ; width: 10%;  color: #000; font-size: 20px; animation-name: service; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 1.5s;  }
+@keyframes service { 
+    0% { transform: translateY(0);   }
+    50% { transform: translateY(20px);  }
+    100%{ transform: translateY(0px);  }
+}
+#pg1 a:hover { color:  #3366cc;  }
+
+/*페이지2*/
+#pg2  { background-image: url("../m_data/m_bg/pg2_bg.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100vw; }
+#pg2 .tit { font-size: 45px;line-height: 2.0; color:#fff; position: relative; box-sizing: border-box; padding-left: 10%; margin-top: 5%;  }
+#pg2 .tit:before{content: ""; display: block; position:absolute; top: 0; left: 0; width: 100%; height: auto; }
+
+#pg2 .wrap { width: 80%; margin: 0px auto;  }
+#pg2 ul.of_lst { width: 100%; padding-top: 2%; }
+#pg2 ul.of_lst li { width: 20%; font-size: 30px; float: left; line-height: 2.0; clear:both; position: relative; }
+#pg2 ul.of_lst li.hover a { display: block;  color:#e1e2e5;  width: 100%; position: relative;  height: 100%; overflow: hidden;}
+#pg2 ul.of_lst li.hover a:before { transition:0.5s; width:0; height: 100%;  opacity: 0; visibility: hidden; display: block; color:  #3366cc; position:absolute; top: 0; left: 0;  box-sizing: border-box; }
+
+/*before*/
+#pg2 ul.of_lst li.it2 a:before { content:"내사건 검색"; }
+#pg2 ul.of_lst li.it3 a:before { content:"행정심판"; }
+#pg2 ul.of_lst li.it4 a:before { content:"운전면허 조회"; }
+#pg2 ul.of_lst li.it5 a:before { content:"교통 알림e"; }
+#pg2 ul.of_lst li.it6 a:before { content:"실종아동"; }
+#pg2 ul.of_lst li.it7 a:before { content:"여성·학교폭력신고"; }
+#pg2 ul.of_lst li.it8 a:before { content:"유실물센터"; }
+#pg2 ul.of_lst li.it9 a:before { content:"파킹캅 다운로드"; }
+#pg2 ul.of_lst li.it10 a:before { content:"순직경찰추모관"; }
+
+/*after*/
+/*#pg2 ul.of_lst li.hover a:after { content:""; width: 19px; height: 19px; position: absolute; top: 20%; right:0; opacity: 0; visibility: hidden; transition:0.5s;  background-image: url("../ico/page2_hover.png"); }*/
+
+#pg2 ul.of_lst li.hover a:hover::before{ width: 100%; opacity: 1; visibility: visible; border-bottom: 2px solid  #3366cc; }
+/*#pg2 ul.of_lst li.hover a:hover::after { opacity: 1; visibility: visible; }*/
+
+/*리스트 호버시 it1 이미지 변경*/
+
+
+    
+}
+
+
+@media screen and (min-width:768px) and (max-width:960px){
+    
+/*  탭 디바이스 일때  바꿀 내용쓰는 부분*/
+    
+}
+
+@media screen and (min-width:961px) and (max-width:1280px) { 
+
+    /*  데스크탑 디바이스 일때  바꿀 내용쓰는 부분*/
+}
