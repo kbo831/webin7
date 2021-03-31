@@ -9,7 +9,7 @@
 /* 내용물에다가 높이주기 */
 .vs .vs_box li { width: 50%; height:800px; float:left; position: relative; overflow: hidden;}
 .vs .vs_box li a { display:block; }
-.vs .vs_box li.it1 .btxt { position:absolute; font-size:  80px; top: 25%; left: 50%; margin-left: -419px; text-align: center;
+.vs .vs_box li.it1 .btxt { position:absolute; font-size:  80px; top: 35%; left: 50%; margin-left: -23%; text-align: center;
     /* 텍스트 그라디언트 */
     background: #3366cc; 
     background: -moz-linear-gradient(-45deg, #062e81 0%, #3366cc 63%); 
@@ -19,8 +19,8 @@
 -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;}
  .vs .vs_box li.it1 .btxt p.com { font-size: 50px;}
-
-.vs .vs_box img { display: block ;  position:absolute; top:10%; }
+/*포지션 잡는 태그는 맨 마지맥에 넣어줘야 저절로 맨앞으로 옴 */
+.vs .vs_box img { display: block ;  position:absolute; top:20%; }
 .vs .vs_box img.podol { left: 150px;}
 .vs .vs_box img.posoon { right: 150px;}
 .vs .vs_box .nav_box { width: 100%; height:10% ; position:absolute; bottom: 0; left: 0; background-color: #062e81; border : 1px solid #2c7ff2; box-sizing: border-box; overflow: hidden; }
@@ -30,10 +30,10 @@
 .vs .vs_box .nav li a:hover { color: #3366cc; background-color: #fff; }
 
 /*슬라이드 넘겼을 때 시작하기 생각하기*/
-.vs .vs_box .poli_car { display: block; width: 235px; height: 118px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 11s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
+.vs .vs_box .poli_car { display: block; width: 235px; height: 118px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 8s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
 @keyframes policar { 
-    0% { transform: translateX(2000px); }
-    100%{transform: translateX(-1700px); }
+    0% { transform: translateX(1930px); }
+    100% {transform: translateX(-1700px); }
 }
 
 /*버튼 양쪾 사이드 높이는 풀사이즈 마우스 포인터 버튼에 호버시 바뀜 */
