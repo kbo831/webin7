@@ -12,7 +12,7 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .wrap { width: 100vw;  clear:both; }
 .wrap:after { content:""; clear:both; display:block; }
 
-.hd { width: 100%; height: auto; overflow: hidden; }
+.hd { width: 100%; height: auto; overflow: hidden; border-bottom: 1px solid #ddd; }
 
 .hd .h_lst { width: 100%; height: 100%; margin: 20px;}
 .hd .h_lst .logo { float:left; position: fixed; z-index: 99; }
@@ -85,10 +85,10 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 푸터 하단메뉴
 .ft_wrap .fnb .fnb_lst { width: 100%; text-align: center; }
 .ft_wrap .fnb .fnb_lst li { float:left;  width: 20%; }
-.ft_wrap .fnb .fnb_lst li a { display: block; width: 100%; color:#ddd; font-size: 28px; line-height: 2.0;}
+.ft_wrap .fnb .fnb_lst li a { display: block; width: 100%; color:#ddd; font-size: 1.5em; line-height: 2.0;}
 .ft_wrap .fnb .fnb_lst .sub,.ft_wrap .fnb .fnb_lst .sub li { clear:both;  width: 100%; }
 .ft_wrap .fnb .fnb_lst .sub li,.ft_wrap .fnb .fnb_lst .sub li{width: 100%;}
-.ft_wrap .fnb .fnb_lst .sub li a { display: block; color:#ddd; font-size: 18px;}
+.ft_wrap .fnb .fnb_lst .sub li a { display: block; color:#ddd; font-size: 1.5em;}
 .ft_wrap .fnb .fnb_lst .sub li a:hover { text-decoration: underline; color: #97edff;  }
 
 .ft_wrap .fnb .copy  { width: 100%; }
@@ -103,7 +103,6 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 
 @media screen and (max-width:767px){
     
-.hd { width: 100%; height: 90px; overflow: hidden; border-bottom: 1px solid #ddd; }
 
 .hd .h_lst { width: 100%; height: 100%; margin: 1%;}
 .hd .h_lst .logo { display: block; float:left; position: fixed; z-index: 99; width: 200px; height: 13%;  background-image:url("../logo/m_logo_JEONBUK_blue.png");  text-indent: -9999px; background-repeat: no-repeat; background-position: center center; }
@@ -151,14 +150,15 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
    
   
 /*footer*/
-/*.ft { width: 100%; height: auto; clear:both; background-color: #062e81; display: none; overflow: hidden;}
-.ft_wrap { width: 98%; height: auto;  margin: 0 auto; padding-top: 10%;}
-.ft_wrap .sel { width:100%; float:none;  }
-.ft_wrap .fnb { width: 100%; float:none;   }
+
+.ft {height: 25vh; } 
+.ft_wrap .sel,.ft_wrap .fnb  { width: 95%; float:none;  }
+.ft_wrap .fnb  { display:none;  }
+.ft_wrap .fnb:after { content:""; display: block; clear:both; }    
 
 .ft_wrap .sel .tit { font-size: 1.2em;  color: #fff; line-height: 2.0; text-align: center; }
 .ft_wrap .sel .ck_lst li { width:90%; height: 20%;  margin: 0 auto; position:relative; }
-.ft_wrap .sel .ck_lst li label { display: block; width:100%; height: 100%;  color: #fff; font-size: 1.5rem;  line-height: 70px; border-bottom: 2px solid #fff; position:relative; box-sizing: border-box; padding-left: 15%; cursor: pointer;  }
+.ft_wrap .sel .ck_lst li label { display: block; width:100%; height: 100%;  color: #fff; font-size: 1.2rem;  line-height:2.0; border-bottom: 2px solid #fff; position:relative; box-sizing: border-box; padding-left: 20%; cursor: pointer;  }
 .ft_wrap .sel .ck_lst label:after { content:""; display: block; background-image: url("../ico/select-bg_w.png"); width: 22px; height: 15px; position: absolute; right: 0; top: 50%; margin-top:-7.5px ; transition: 0.6s; transform: rotate(-540deg);}
 
 .ft_wrap .ck_lst .sub { width: 100%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:3px solid #fff;  transition: 0.6s;  background-color: #eee; position:absolute; bottom: 100%;}
@@ -170,13 +170,10 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 
 .ck { display: none;}
 
-푸터 하단메뉴
-.ft_wrap .fnb .fnb_lst { width: 100%; text-align: center; display: none; }
 
 
-.ft_wrap .fnb .copy  { width: 100%; padding-bottom: 10%; }
-.ft_wrap .fnb .copy .copy_tit { width:100%;  color: #aeaeae; line-height: 1.6; margin-left: 0%; margin-top: 5%; font-size: 1em; text-align: center;}     
-    */
+    
+
     
     
     
