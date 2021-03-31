@@ -9,16 +9,15 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .clr{ clear:both; }
 .clr:after{ content:""; display: block; clear:both; }
 
-.wrap { width: 100vw;  clear:both; }
+.wrap { width: 100vw; height:100vh ; clear:both; }
 .wrap:after { content:""; clear:both; display:block; }
 
-.hd { width: 100%; height: auto; overflow: hidden; border-bottom: 1px solid #ddd; }
+.hd { width: 100%; height: 10vh; overflow: hidden;  }
 
-.hd .h_lst { width: 100%; height: 100%; margin: 20px;}
-.hd .h_lst .logo { float:left; position: fixed; z-index: 99; }
-.hd .h_lst .logo  { display: block; background-image:url("../logo/logo_JEONBUK_blue.png"); width: 422px; height: 102px; text-indent: -9999px; }
+.hd .h_lst { width: 100%; }
+.hd .h_lst .logo  { float:left; display: block; background-image:url("../logo/logo_JEONBUK_blue.png"); width: 422px; height: 102px; text-indent: -9999px; background-repeat: no-repeat; background-position: center center; }
 
-.hd .h_lst .lst_box { float:right; width: 150px; height: 102px; position:fixed; top:4%; z-index: 101; right:0;}
+.hd .h_lst .lst_box { float:right; width: 150px; height: 102px; }
 
 .hd .h_lst .lst_box li { width: 80%; height:100%;  float:left;  }
 .hd .h_lst .lst_box li .m_btn { display: block;  width:80px; height: 70px; position: relative; border:0; background-color: transparent; outline: 0; border:0; }
@@ -34,18 +33,18 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .hd .h_lst .lst_box li .m_btn.on span.bar3 { top:43%; transform: rotate(-225deg); background-color: #fff; }
 .hd .h_lst .lst_box li .m_btn.on span.close { opacity: 1; visibility: visible; color:#fff; }
 
-.hd .gnb { width: 100vw; height: 100vh; transition:0.7s; position:fixed; left: 0; top: 0; overflow: hidden; margin-top: -100vw; background-image: url(../m_data/m_bg/gnb_bg2.png); background-position: center center; background-repeat: no-repeat; z-index: 100; background-size: cover;}
+.hd .gnb { width: 100vw; height: 100vh; transition:0.7s; position:fixed; left: 0; top: 0; overflow: hidden; margin-top: -100vh; background-image: url(../m_data/m_bg/gnb_bg2.png); background-position: center center; background-repeat: no-repeat; z-index: 100; background-size: cover;}
 
 
 .hd .gnb.on { margin-top: 0px; }
 
 .hd .gnb .wrap { width: 100%; height: 100%; position: relative; }
 .hd .gnb  .logo_lst { height:102px; margin: 20px; } 
-.hd .gnb  .logo_lst li { float:left; }
-.hd .gnb  .logo_lst li:first-child a { display: block; width: 442px; height:102px; background-image: url("../logo/logo_JEONBUK_w.png"); text-indent: -99999px; }
+.hd .gnb  .logo_lst li { float:left; background-repeat: no-repeat; background-position: center center; }
+.hd .gnb  .logo_lst li:first-child a { display: block; width: 442px; height:102px; background-image: url("../logo/logo_JEONBUK_w.png"); text-indent: -99999px; background-repeat: no-repeat; background-position: center center;}
 
 .hd .gnb  .g_lst { width: 100%; height: 100%; position: absolute; top: 14%; left: 10%; display: none; }
-.hd .gnb  .g_lst li.it { width: 10%; height:15%;  font-size: 40px; position: relative; font-weight: 800; }
+.hd .gnb  .g_lst li.it { width: 10%; height:15%;  font-size: 2.0em; position: relative; font-weight: 800; }
 
 .hd .gnb  .g_lst li.it  a.item {  display: block; width: 100%; height: 100% ; text-align: center; line-height: 140px; color: #062e81; }
 
@@ -61,19 +60,19 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 /*footer*/
 
 
-.ft { width: 100%; height: 100%; clear:both; background-color: #062e81; clear:both; overflow: hidden;} 
+.ft { width: 100%; height:50vh; clear:both; background-color: #062e81; clear:both; overflow: hidden; } 
 .ft:after { content:""; clear:both; display: block; }
-.ft_wrap { width: 96%; height: auto;  margin: 0 auto; padding-top: 30px;  overflow: hidden; }
+.ft_wrap { width: 96%; height: auto;  margin: 0 auto; padding-top: 30px;  }
 .ft_wrap:after { content:"";  clear:both; display: block; }
 .ft_wrap .sel { width: 20%; float:left; margin-left: 5%;}
-.ft_wrap .fnb { width: 63%;  float:left; padding-top: 4.5% ;  margin-left: 5%;}
+.ft_wrap .fnb { width: 63%;  float:left; padding-top: 4.5% ;  margin-left: 5%; overflow: hidden; }
 
 .ft_wrap .sel .tit { font-size: 30px;  color: #fff; line-height: 2.0; }
 .ft_wrap .sel .ck_lst li { width: 100%; height: 70px; }
 .ft_wrap .sel .ck_lst li label { display: block; width:100%; height: 100%;  color: #fff; font-size: 27px;  line-height: 70px; border-bottom: 2px solid #fff; position:relative; box-sizing: border-box; padding-left: 20px; cursor: pointer; }
 .ft_wrap .sel .ck_lst li label:after { content:""; display: block; background-image: url("../ico/select-bg_w.png"); width: 22px; height: 15px; position: absolute; right: 0; top: 50%; margin-top:-7.5px ; transition: 0.6s;}
 
-.ft_wrap .ck_lst .sub { width: 42%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:2px solid #fff;  transition: 0.6s; border-top: 0;  background-color: #eee;}
+.ft_wrap .ck_lst .sub { width: 100%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:2px solid #fff;  transition: 0.6s; border-top: 0;  background-color: #eee;}
 .ft_wrap .ck_lst .sub  li a { color: gray;  display: block;  box-sizing: border-box; padding-left: 20px; }
 .ft_wrap .ck_lst .sub  li a:hover { color:#2c7ff2; }
 
@@ -92,7 +91,7 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .ft_wrap .fnb .fnb_lst .sub li a:hover { text-decoration: underline; color: #97edff;  }
 
 .ft_wrap .fnb .copy  { width: 100%; }
-.ft_wrap .fnb .copy .copy_tit { width:100%;  color: #aeaeae; line-height: 5.0; margin-left: 5%; margin-top: 5%; font-size: 18px;} 
+.ft_wrap .fnb .copy .copy_tit { width:100%;  color: #aeaeae; line-height: 1.6; margin-left: 5%; margin-top: 2%; font-size: 18px;} 
 
 
 
@@ -103,7 +102,6 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 
 @media screen and (max-width:767px){
     
-
 .hd .h_lst { width: 100%; height: 100%; margin: 1%;}
 .hd .h_lst .logo { display: block; float:left; position: fixed; z-index: 99; width: 200px; height: 13%;  background-image:url("../logo/m_logo_JEONBUK_blue.png");  text-indent: -9999px; background-repeat: no-repeat; background-position: center center; }
 
@@ -124,7 +122,6 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .hd .h_lst .lst_box li .m_btn.on span.bar3 { top:43%; transform: rotate(-225deg); background-color: #fff; }
 .hd .h_lst .lst_box li .m_btn.on span.close { opacity: 1; visibility: visible; color:#fff; }
 
-.hd .gnb { width: 100vw; height: 100vh; transition:0.7s; position:fixed; left: 0; top: 0; overflow: hidden; margin-top: -100vh;  background-position: center right; background-repeat: no-repeat; z-index: 100; }
 
 
 .hd .gnb.on { margin-top: 0px; }
@@ -151,7 +148,7 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
   
 /*footer*/
 
-.ft {height: 25vh; } 
+.ft { height: 25vh; overflow: visible;  } 
 .ft_wrap .sel,.ft_wrap .fnb  { width: 95%; float:none;  }
 .ft_wrap .fnb  { display:none;  }
 .ft_wrap .fnb:after { content:""; display: block; clear:both; }    
@@ -163,28 +160,50 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 
 .ft_wrap .ck_lst .sub { width: 100%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:3px solid #fff;  transition: 0.6s;  background-color: #eee; position:absolute; bottom: 100%;}
 .ft_wrap .ck_lst .sub  li a { color: gray;  display: block;  box-sizing: border-box; padding-left: 15%; font-size: 1.5rem; line-height: 1.6;}
-.ft_wrap .ck_lst .sub  li a:hover { color:#2c7ff2; }
-
-#check:checked ~ .ck_lst .sub { opacity:1;  visibility: visible;  height: 250px; }
-#check:checked ~ .ck_lst li label:after { transform:rotate(0deg); }
-
-.ck { display: none;}
 
 
 
-    
 
-    
-    
-    
 
-    
+  
 }
 
 
 @media screen and (min-width:768px) and (max-width:960px){
     
 /*  탭 디바이스 일때  바꿀 내용쓰는 부분*/
+.hd .h_lst .logo { background-image: url("../logo/logo_JEONBUK_blue.png"); width: 422px; height: 102px; }
+    
+.hd .gnb { background-position: center right; }
+    .hd .gnb .g_lst { left: 5%;}
+.hd .gnb  .g_lst li.it { width: 30%; font-size: 2em;  }
+.hd .gnb  .logo_lst li:last-child { display: none; }
+.hd .gnb  .g_lst li.it  a.item {  display: block; width: 100%; height: 100% ; text-align: center; line-height: 140px; color: #062e81; }
+.hd .gnb  .sub { position:absolute; top:30%;  left:120%  ; width: 60vw; display: none; } 
+.hd .gnb  .sub li { width: 100%; float:none; clear: both; }
+.hd .gnb  .sub li a { display: block; width: 100%; height: 100%;  font-size:1em; line-height: 2.0; text-align: left; color:#000; transition:0.5s; box-sizing: border-box; }
+.hd .gnb  .sub li.long { width: 100%;}
+.hd .gnb  .sub li.center a{ padding-left: 0px; }
+.hd .gnb  .g_lst li.it a.on { color: #fff; margin-left: 30px; }
+
+
+
+.ft { height: 18vh; overflow: visible; } 
+.ft_wrap .sel { width: 30%; }
+.ft_wrap .sel .tit { font-size: 1.2em;  line-height: 2.0; text-align: center; }
+.ft_wrap .sel .ck_lst li { width:90%; height: 20%;  margin: 0 auto; position:relative; }
+.ft_wrap .sel .ck_lst li label { font-size: 1.2rem;  line-height:2.0;   }
+
+.ft_wrap .ck_lst .sub { width: 100%; height: 0px; font-size: 27px; opacity:0;  visibility: hidden; overflow-y:auto; box-sizing: border-box; border:1 solid #fff;  transition: 0.6s;  background-color: #eee; position:absolute; bottom: 100%;}
+.ft_wrap .ck_lst .sub  li a { color: gray;  display: block;  box-sizing: border-box; padding-left: 15%; font-size: 1.0rem; line-height: 1.6;}
+
+/*푸터 하단메뉴*/
+.ft_wrap .fnb { width: 60%; margin-top: 0;padding-top: 0;  }
+.ft_wrap .fnb .fnb_lst li { float:left;  width: 20%;  }
+.ft_wrap .fnb .fnb_lst li a { font-size: 1.2rem; line-height: 1.6;}
+.ft_wrap .fnb .fnb_lst .sub  { display: none; }
+
+.ft_wrap .fnb .copy .copy_tit { width:100%;  color: #aeaeae; line-height: 2.0; margin-left: 5%;  margin-top: 2%; font-size: 18px;} 
     
 }
 
