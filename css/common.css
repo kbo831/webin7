@@ -15,7 +15,8 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 .hd { width: 100%; height: 10vh; overflow: hidden;  }
 
 .hd .h_lst { width: 100%; }
-.hd .h_lst .logo  { float:left; display: block; background-image:url("../logo/logo_JEONBUK_blue.png"); width: 422px; height: 102px; text-indent: -9999px; background-repeat: no-repeat; background-position: center center; position: fixed; top: 2%; left: 2%;}
+.hd .h_lst .logo  { float:left; display: block; text-indent: -9999px; background-repeat: no-repeat; background-position: center center; position: fixed; top: 2%; left: 2%;}
+.hd .h_lst .logo img{ display: block; width: 100%; height:auto;}
 
 .hd .h_lst .lst_box { float:right; width: 150px; height: 102px; position:fixed; top: 4%; right: 0; z-index: 101; }
 
@@ -103,7 +104,7 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 @media screen and (max-width:767px){
     
 .hd .h_lst { width: 100%; height: 100%; margin: 1%;}
-.hd .h_lst .logo { display: block; float:left; position: fixed; z-index: 99; width: 200px; height: 13%;  background-image:url("../logo/m_logo_JEONBUK_blue.png");  text-indent: -9999px; background-repeat: no-repeat; background-position: center center; }
+.hd .h_lst .logo { display: block; float:left; position: fixed; z-index: 99; width: 200px; height: 13%;    text-indent: -9999px; background-repeat: no-repeat; background-position: center center; }
 
 
 .hd .h_lst .lst_box { float:right; width: 20%; height: 10%; position:fixed; top:3%; right:0; z-index: 999; }
@@ -172,7 +173,7 @@ img,input,button { background-color: transparent; border:0; outline:0; user-sele
 @media screen and (min-width:768px) and (max-width:960px){
     
 /*  탭 디바이스 일때  바꿀 내용쓰는 부분*/
-.hd .h_lst .logo { background-image: url("../logo/logo_JEONBUK_blue.png"); width: 422px; height: 102px; }
+
     
 .hd .gnb { background-position: center right; }
     .hd .gnb .g_lst { left: 5%;}
