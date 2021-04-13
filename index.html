@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
+
     <script src="./js/jquery.js"></script>
     <script src="./js/prefixfree.js"></script>
     <script src="./js/respond.min.js"></script>
@@ -21,7 +22,7 @@
     <div class="wrap">
         <header class="hd">
             <div class="h_lst">
-                <a href="index.html" class="logo"><img src="../logo/logo_JEONBUK_blue.png" alt="메인로고"></a>
+                <a href="index.html" class="logo">전북경찰청</a>
                 <ul class="lst_box">
                     <li>
                         <button class="m_btn">
@@ -140,16 +141,19 @@
                         });
                     </script>
                 </div>
+
             </div>
         </header>
         <div class="content clr">
             <figure class="vs">
                 <ul class="vs_box">
                     <li class="it1">
+                        <img src="./m_data/m_ico/main_pdol.png" alt="포돌이" class="podol">
                         <div class="btxt">
                             <h2 class="big">전라북도경찰청</h2>
                             <p class="com">Junbuk provincial police agency</p>
                         </div>
+                        <img src="./m_data/m_ico/main_posoon.png" alt="포순이" class="posoon">
                         <div class="nav_box clr">
                             <ul class="nav clr">
                                 <li class="it1"><a href="">공지사항</a></li>
@@ -159,8 +163,6 @@
                                 <li class="it5"><a href="">관서소개</a></li>
                             </ul>
                         </div>
-                        <img src="./m_data/m_ico/main_posoon.png" alt="포순이" class="posoon">
-                        <img src="./m_data/m_ico/main_pdol.png" alt="포돌이" class="podol">
                     </li>
                     <li class="it2">
                         <a href="" class="poli_car">경찰차</a>
@@ -168,22 +170,21 @@
                 </ul>
                 <script>
                     $(document).ready(function() {
-                        var cnt = $(".vs_box > li").length;
-                        var ml = parseInt($(".vs_box").width()/cnt);
-                        console.log(cnt);
+                        var cnt = $(".vs_box li").length;
+
                         function prev() {
                             $(".vs_box").not(":animated").animate({
-                                "margin-left": -ml
+                                "margin-left": "-1920px"
                             }, 700, function() {
-                                $(".vs_box > li").eq(0).appendTo($(".vs_box"));
+                                $(".vs_box li").eq(0).appendTo($(".vs_box"));
                                 $(".vs_box").css("margin-left", "0px");
                             });
 
                         }
 
                         function next() {
-                            $(".vs_box > li").eq(cnt - 1).prependTo($(".vs_box"));
-                            $(".vs_box").css("margin-left", -ml);
+                            $(".vs_box li").eq(cnt - 1).prependTo($(".vs_box"));
+                            $(".vs_box").css("margin-left", "-1920px");
                             $(".vs_box").not(":animated").animate({
                                 "margin-left": "0px"
                             }, 700);
@@ -251,12 +252,12 @@
                 </div>
             </section>
         </div>
-        <footer class="ft">
-            <div class="ft_wrap clr ">
-                <section class="sel ">
+        <footer class="ft clr">
+            <div class="ft_wrap clr">
+                <section class="sel">
                    <h2 class="tit">Junbuk provincial police agency</h2>
                     <input type="checkbox" class="ck" id="check">
-                    <ul class="ck_lst clr ">
+                    <ul class="ck_lst">
                         <li>
                            <label for="check">전라북도 경찰서</label>
                             <ul class="sub">
@@ -279,8 +280,8 @@
                         </li>
                     </ul>
                 </section>
-                <div class="fnb ">
-                    <ul class="fnb_lst clr ">
+                <div class="fnb">
+                    <ul class="fnb_lst">
                         <li class="it">
                             <a href="" class="item">국민마당</a>
                             <ul class="sub">
