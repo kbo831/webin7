@@ -1,2 +1,2 @@
 # webin7
-반응형
+display: block  반응형
