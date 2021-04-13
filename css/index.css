@@ -1,39 +1,35 @@
 @charset "utf-8";
-/*큰틀에 다 클리어 픽스 처리해주기 높이는 auto 아니면 주지 않기  맨 큰 틀에다가 vw vh 비율 단위로 주기 / content는 높이 주지 말기 : 각 페이지에다가 높이를  100vh  */
-.content { width: 100vw ;  height: auto;}
-.content:after { content: ""; clear:both; display: block; }
-.vs { width: 100%;  position:relative;  overflow:hidden; }
-.vs:after { content:""; clear:both; display:block; }
-.vs .vs_box { width:200%;  }
-.vs .vs_box:after { content:""; clear:both; display:block; }
-/* 내용물에다가 높이주기 */
-.vs .vs_box li { width: 50%; height:800px; float:left; position: relative; overflow: hidden;}
-.vs .vs_box li a { display:block; }
-.vs .vs_box li.it1 .btxt { position:absolute; font-size:  80px; top: 35%; left: 50%; margin-left: -23%; text-align: center;
-/* 텍스트 그라디언트 */
-background: #3366cc; 
-background: -moz-linear-gradient(-45deg, #062e81 0%, #3366cc 63%); 
-background: -webkit-linear-gradient(-45deg, #062e81 0%,#3366cc 63%); 
-background: linear-gradient(135deg, #062e81 0%,#3366cc 63%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', endColorstr='#3366cc',GradientType=1 ); 
+
+/*content*/
+.content { width: 100vw ;  overflow: hidden;}
+.vs { width: 100%; height: 800px; overflow: hidden; position:relative;  }
+.vs .vs_box { width:200%; height:800px; }
+.vs .vs_box li { width: 50%; height:100%; position: relative; overflow: hidden;}
+.vs .vs_box .btxt { position:absolute; font-size:  80px; top: 25%; left: 50%; margin-left: -419px; text-align: center;
+    /* 텍스트 그라디언트 */
+    background: #3366cc; 
+    background: -moz-linear-gradient(-45deg, #062e81 0%, #3366cc 63%); 
+    background: -webkit-linear-gradient(-45deg, #062e81 0%,#3366cc 63%); 
+    background: linear-gradient(135deg, #062e81 0%,#3366cc 63%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', endColorstr='#3366cc',GradientType=1 ); 
 -webkit-background-clip: text;
--webkit-text-fill-color: transparent;}
-.vs .vs_box li.it1 .btxt p.com { font-size: 50px;}
-/*포지션 잡는 태그는 맨 마지맥에 넣어줘야 저절로 맨앞으로 옴 */
-.vs .vs_box img { display: block ; width: 15%; height:auto;  position:absolute; top:20%; }
-.vs .vs_box img.podol { left: 10%;}
-.vs .vs_box img.posoon { right: 10%;}
-.vs .vs_box .nav_box { width: 100%; height:10% ; position:absolute; bottom: 0; left: 0; background-color: #062e81; border : 1px solid #2c7ff2; box-sizing: border-box; overflow: hidden; }
-.vs .vs_box .nav_box  .nav {  width: 95%; height: 100%;  margin: 0 auto;}
+ -webkit-text-fill-color: transparent;}
+ .vs .vs_box .btxt p.com { font-size: 50px;}
+
+.vs .vs_box img { display: block ;  width: 297px; height: 402px; position:absolute; top:10%; }
+.vs .vs_box img.podol { left: 150px;}
+.vs .vs_box img.posoon { right: 150px;}
+.vs .vs_box .nav_box { width: 100%; height:10% ; position:absolute; bottom: 10%; left: 0; background-color: #062e81; border : 1px solid #2c7ff2; box-sizing: border-box; }
+.vs .vs_box .nav_box  .nav {  width: 80%; height: 100%;  margin: 0 auto;}
 .vs .vs_box .nav li { width: 20%; float: left; text-align: center; }
 .vs .vs_box .nav li a { display: block; height:100%; line-height: 80px; font-size: 2em;  color: #fff; }
 .vs .vs_box .nav li a:hover { color: #3366cc; background-color: #fff; }
 
 /*슬라이드 넘겼을 때 시작하기 생각하기*/
-.vs .vs_box .poli_car { display: block; width: 235px; height: 118px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 8s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
+.vs .vs_box .poli_car { display: block; width: 235px; height: 118px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 11s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
 @keyframes policar { 
-0% { transform: translateX(1930px); }
-100% {transform: translateX(-1700px); }
+    0% { transform: translateX(100px); }
+    100%{transform: translateX(-1700px); }
 }
 
 /*버튼 양쪾 사이드 높이는 풀사이즈 마우스 포인터 버튼에 호버시 바뀜 */
@@ -44,31 +40,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', end
 .vs .next { right: 0; } 
 
 /*page 영역 :모든 영역 높이 800px; 큰틀에 overflow:hidden 고정 높이일 때 */
-.pg {width: 100%; height:100vh; overflow: hidden;  background-size: 100% auto; background-position: center center; }
-.pg:after { content:""; clear:both; display:block; }
-.pg .wrap { width: 100%; height:100%;  overflow: hidden; position:relative; }
-
-#pg1 .wrap { width: 100%; background-image: url("../m_data/m_bg/pg1_bg.png"); background-position: center center; background-repeat: no-repeat; background-size: 100% auto;  background-color: #fcfef5; }
-
+.pg { width: 100%; height:800px; overflow: hidden; position:relative; }
+#pg1 { background-color: #fcfef5; }
+#pg1 .wrap{ width: 100%; height:100%;  background-image: url(../m_data/m_bg/pg1_bg.png);}
 #pg1 .text_box { width:43%; position:absolute; top: 50%; margin-top: -10%; left:50%; margin-left: -413.5px; }
 #pg1 .text_box h1.tit{ font-size: 60px; line-height: 1.6;  }
 #pg1 .text_box h1.left  { text-align: right; }
 #pg1 p.com { font-size: 25px;text-align: center; margin-top: 5%; line-height: 1.6;  }
-
+#pg1 .ani_box { position: absolute; bottom: 15%; left: 50%; margin-left: -96px ; width: 15%;  }
 #pg1  a { display: block; position: absolute; bottom: 15%; left: 50%; margin-left: -96px ; width: 10%;  color: #000; font-size: 20px; animation-name: service; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 1.5s;  }
 @keyframes service { 
-0% { transform: translateY(0);   }
-50% { transform: translateY(20px);  }
-100%{ transform: translateY(0px);  }
+    0% { transform: translateY(0);   }
+    50% { transform: translateY(20px);  }
+    100%{ transform: translateY(0px);  }
 }
 #pg1 a:hover { color:  #3366cc;  }
 
 /*페이지2*/
-#pg2  { background-image: url("../m_data/m_bg/pg2_bg.jpg"); background-position: center center; background-repeat: no-repeat; background-size: center left; width: 100vw; }
-#pg2 .tit { font-size: 45px; line-height: 2.0; color:#fff; position: relative; box-sizing: border-box; padding-left: 10%; margin-top: 5%;  }
+#pg2  { background-image: url("../m_data/m_bg/pg2_bg.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100vw; }
+#pg2 .tit { font-size: 45px;line-height: 2.0; color:#fff; position: relative; box-sizing: border-box; padding-left: 10%; margin-top: 5%;  }
 #pg2 .tit:before{content: ""; display: block; position:absolute; top: 0; left: 0; width: 100%; height: auto; }
 
-#pg2 .wrap { width: 80%; margin: 0px auto; }
+#pg2 .wrap { width: 80%; margin: 0px auto;  }
 #pg2 ul.of_lst { width: 100%; padding-top: 2%; }
 #pg2 ul.of_lst li { width: 20%; font-size: 30px; float: left; line-height: 2.0; clear:both; position: relative; }
 #pg2 ul.of_lst li.hover a { display: block;  color:#e1e2e5;  width: 100%; position: relative;  height: 100%; overflow: hidden;}
@@ -92,103 +85,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062e81', end
 /*#pg2 ul.of_lst li.hover a:hover::after { opacity: 1; visibility: visible; }*/
 
 /*리스트 호버시 it1 이미지 변경*/
-
-
-
-
-@media screen and (max-width:767px){
-/*   반응형은 이미지를 넣어서 배경 잡기; 배경이미지는 위치를 100% auto 로 한다 */
-/*content*/
-
-.vs .vs_box { width:200%; height:100%; }
-.vs .vs_box li { width: 50%; height:640px; position: relative; overflow: hidden; float:left;}
-.vs .vs_box li.it1 .btxt { top: 55%; left: 50%;  margin-left: -38%; 
-    font-size: 1em; }
-.vs .vs_box li.it1 .btxt h2.big { font-size: 2em; line-height: 2.0 ; }
-.vs .vs_box li.it1 .btxt p.com { font-size: 1em; }
-
-.vs .vs_box img {  width:40%; height: auto; top:18%; }
-.vs .vs_box img.podol { left:10%; }
-.vs .vs_box img.posoon { right: 10%; }
-.vs .vs_box .nav_box { width: 100%; height:12%; }
-.vs .vs_box .nav_box  .nav {  width: 95%; height: auto;  margin: 0 auto; } 
-.vs .vs_box .nav li { width: 20%; height:100%; float: left; text-align: left; overflow: hidden; }
-.vs .vs_box .nav li a { display: block; height:100%; line-height: 80px; font-size:0.9em;  color: #fff; text-align: center; }
-.vs .vs_box .nav li a:hover { color: #3366cc; background-color: #fff; }
-
-/*슬라이드 넘겼을 때 : 경찰차 사진 바꾸기 애니매이션도 :확대 애니메이션으로  */
-.vs .vs_box .poli_car { display: block; width: 100px; height: 30px; background-image: url(../m_data/m_ico/poli_car2.png); position:absolute; bottom: 0px; right:-235px; animation-name: policar; animation-duration: 5s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;  }
-
-@keyframes policar { 
-    0% { transform: scale(); }
-    100% {transform: scale(); }
-}
-
-/*버튼 양쪾 사이드 높이는 풀사이즈 마우스 포인터 버튼에 호버시 바뀜 */
-
-.vs button { display: block; height:80vh; width:15%; position:absolute; top: 0; cursor: pointer; display: none; }
-.vs:hover button { display: block; }
-.vs .prev { left: 0; }
-.vs .next { right: 0; } 
-
-/*page 영역 :모든 영역 높이 800px; 큰틀에 overflow:hidden 고정 높이일 때 */
-.pg { width: 100%; height:100vh; overflow: hidden; position:relative; }
-#pg1 .wrap { width: 100%;  background-image: url("../m_data/m_bg/m_pg1.png"); }
-#pg1 .text_box { width:80%; top: 35%; left: 50%; margin-left: -42%;   }
-#pg1 .text_box h1.tit{ font-size: 1.5em; line-height: 1.6;  }
-#pg1 .text_box h1.left  { text-align: right; }
-#pg1 p.com { font-size: 1em;text-align: center; margin-top: 5%; line-height: 1.6; letter-spacing: 1.5px; }
-
-#pg1  a { display: block; position: absolute; top:65%; left: 50%; margin-left: -90px ; width: 100%;  color: #000; font-size: 20px; animation-name: service; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 1.5s;  }
-@keyframes service { 
-    0% { transform: translateY(0);   }
-    50% { transform: translateY(20px);  }
-    100%{ transform: translateY(0px);  }
-}
-#pg1 a:hover { color:  #3366cc;  }
-
-/*페이지2*/
-
-#pg2  { background-image: url("../m_data/m_bg/m_pg2_02.png");}
-#pg2 .wrap { padding-top: 10%; }
-#pg2 .tit { font-size: 1.5em ; margin-top: 20%; }
-#pg2 ul.of_lst li { font-size: 1.2em; width: 60%;}
-    
-
-    
-
-
-
-@media screen and (min-width:768px) and (max-width:960px){
-    
-vs .vs_box li { width: 50%; height:800px; float:left; position: relative; overflow: hidden;}
-.vs .vs_box li.it1 .btxt { top: 23%; left: 50%;  margin-left: -30%; font-size: 1em; }
-.vs .vs_box li.it1 .btxt h2.big { font-size:3.0em; line-height: 2.5;}
-.vs .vs_box li.it1 .btxt p.com { font-size: 1.8em; }
-.vs .vs_box img {  width: 20%; height: auto; top:50%; }
-.vs .vs_box img.podol { left:20%; }
-.vs .vs_box img.posoon { right: 20%; }
- 
-/* pg1 */
-#pg1 .wrap { width: 100%; background-image: url("../m_data/m_bg/t_pg1.png"); background-position: center center; background-repeat: no-repeat; background-size: 100% auto;  background-color: #fcfef5; }
-
-#pg1 .text_box { width:80%; position:absolute; top: 50%; margin-top: -10%; left:50%;  margin-left: -42%; }
-#pg1 .text_box h1.tit{ font-size: 3.0em; line-height: 1.6;  }
-
-#pg1  a {  bottom: 20%; left: 50%; width: 30%; font-size:1.5em  }   
-    
-    
-/*  페이지2 */
-#pg2  { background-image: url("../m_data/m_bg/t_pg2_02.png");}
-#pg2 .wrap { padding-top: 10%; }
-#pg2 ul.of_lst { width: 100%; padding-top: 0%; }
-#pg2 .tit { font-size: 2.5em ; margin-top: 20%; line-height: 1.5;}
- #pg2 ul.of_lst li { font-size: 2.0em; width: 60%;}
-    
-}
-
-
-
-
-
-    
